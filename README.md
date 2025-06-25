@@ -1,99 +1,91 @@
-# cmf-tracker
-App para mostrar información financiera obtenida de CMF Chile
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# CMFTracker
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+**CMFTracker** es una aplicación desarrollada en React Native para visualizar valores de indicadores financieros (como la UTM, IPC, etc.) desde la **CMF de Chile** (Comisión para el Mercado Financiero).
 
-## Step 1: Start Metro
+## Funcionalidades
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- Visualización de valores de indicadores del año actual o últimos 30 días  
+- Interfaz rápida y responsiva con skeletons de carga  
+- Navegación entre pantallas  
+- Soporte completo para TypeScript
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Estructura del Proyecto
 
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```
+.
+├── App.tsx
+├── src/
+│   ├── api/
+│   ├── components/
+│   ├── constants/
+│   ├── contexts/
+│   ├── hooks/
+│   ├── navigation/
+│   ├── screens/
+│   └── types/
+├── android/
+├── ios/
+└── ...
 ```
 
-## Step 2: Build and run your app
+## Primeros Pasos
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Requisitos Previos
 
-### Android
+- Node.js  
+- npm o yarn  
+- Android Studio o Xcode (para ejecutar en dispositivos o emuladores)
+- Openjdk 17
+>**Nota**: Asegúrese de haber completado las instrucciones [React Native - Configuración de ambiente](https://reactnative.dev/docs/environment-setup) hasta el paso "Crear una nueva aplicación", antes de continuar.
 
-```sh
-# Using npm
-npm run android
+### Instalación
 
-# OR using Yarn
-yarn android
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/casantander/cmf-tracker.git
+cd CMFTracker
 ```
 
-### iOS
+2. Instalar dependencias:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npm install --legacy-peer-deps
+# o
+yarn install --legacy-peer-deps
 ```
 
-Then, and every time you update your native dependencies, run:
+3. Iniciar el bundler de Metro:
 
-```sh
-bundle exec pod install
+```bash
+npx react-native start
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+4. Ejecutar la aplicación:
 
-```sh
-# Using npm
-npm run ios
+- Para Android:
 
-# OR using Yarn
-yarn ios
+```bash
+npx react-native run-android
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+- Para iOS:
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+npx react-native run-ios
+```
 
-## Step 3: Modify your app
+## Scripts Disponibles
 
-Now that you have successfully run the app, let's make changes!
+- `npm run start` — Inicia Metro bundler  
+- `npm run android` — Ejecuta en dispositivo/emulador Android  
+- `npm run ios` — Ejecuta en simulador iOS  
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Licencia
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+MIT
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Nota:** Actualiza los endpoints de la API y las variables de entorno según tus necesidades.
