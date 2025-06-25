@@ -3,6 +3,8 @@
 
 **CMFTracker** es una aplicación desarrollada en React Native para visualizar valores de indicadores financieros (como la UTM, IPC, etc.) desde la **CMF de Chile** (Comisión para el Mercado Financiero).
 
+![Captura de pantalla CMFTracker](https://i.postimg.cc/d0MgK1KC/e4a463df-c84f-4d73-b874-7391148e9e08.jpg)
+
 ## Funcionalidades
 
 - Visualización de valores de indicadores del año actual o últimos 30 días  
@@ -80,7 +82,17 @@ npx react-native run-ios
 
 - `npm run start` — Inicia Metro bundler  
 - `npm run android` — Ejecuta en dispositivo/emulador Android  
-- `npm run ios` — Ejecuta en simulador iOS  
+- `npm run ios` — Ejecuta en simulador iOS
+
+## Librerías
+### react-native-community/netinfo
+Se utiliza para detectar si el dispositivo está conectado a internet. En el caso de que no esté conectado, se muestra un mensaje.
+![Estado conexión](https://i.postimg.cc/L5JL3j8g/1e6f0adb-e91d-4404-ba09-ecce9f22d61e.jpg)
+
+### react-native-wagmi-charts
+Con esta librería es posible generar un gráfico con la información obtenida.
+
+![Grafico](https://i.postimg.cc/XNhxrYsD/79120258-82af-40eb-abab-38c7a3f516d0.jpg)
 
 ## Licencia
 
